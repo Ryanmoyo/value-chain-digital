@@ -1,43 +1,91 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Platform", href: "#platform" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Marketplace", href: "#marketplace" },
-  { label: "Participants", href: "#participants" },
-  { label: "About", href: "#about" },
+  { label: "Platform", href: "#platform", isRoute: false },
+  { label: "How It Works", href: "/how-it-works", isRoute: true },
+  { label: "Marketplace", href: "#marketplace", isRoute: false },
+  { label: "Participants", href: "#participants", isRoute: false },
+  { label: "About", href: "#about", isRoute: false },
 ];
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const NavLink = ({ link }: { link: typeof navLinks[0] }) => {
+    if (link.isRoute) {
+      return (
+        <Link
+          to={link.href}
+          className={`text-sm font-medium transition-colors duration-300 ${
+            location.pathname === link.href
+              ? "text-gold"
+              : "text-light/70 hover:text-gold"
+          }`}
+        >
+          {link.label}
+        </Link>
+      );
+    }
+    return (
+      <a
+        href={link.href}
+        className="text-light/70 hover:text-gold transition-colors duration-300 text-sm font-medium"
+      >
+        {link.label}
+      </a>
+    );
+  };
+
+  const MobileNavLink = ({ link }: { link: typeof navLinks[0] }) => {
+    if (link.isRoute) {
+      return (
+        <Link
+          to={link.href}
+          className={`py-2 text-lg transition-colors ${
+            location.pathname === link.href
+              ? "text-gold"
+              : "text-light/70 hover:text-gold"
+          }`}
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          {link.label}
+        </Link>
+      );
+    }
+    return (
+      <a
+        href={link.href}
+        className="text-light/70 hover:text-gold transition-colors py-2 text-lg"
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        {link.label}
+      </a>
+    );
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
               <span className="font-display font-bold text-dark text-xl">E</span>
             </div>
             <span className="font-display font-semibold text-xl text-light hidden sm:block">
               EquiX<span className="text-gold">Token</span>
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-light/70 hover:text-gold transition-colors duration-300 text-sm font-medium"
-              >
-                {link.label}
-              </a>
+              <NavLink key={link.label} link={link} />
             ))}
           </nav>
 
@@ -72,14 +120,7 @@ const Header = () => {
           >
             <nav className="container mx-auto px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-light/70 hover:text-gold transition-colors py-2 text-lg"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
+                <MobileNavLink key={link.label} link={link} />
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="goldOutline" className="w-full">
