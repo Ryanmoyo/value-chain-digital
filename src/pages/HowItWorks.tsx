@@ -85,11 +85,22 @@ const HowItWorks = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 border-b border-border relative overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl" />
+        <section className="pt-32 pb-20 border-b border-gold/20 relative overflow-hidden">
+          {/* Enhanced Background Elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gold/15 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gold/10 rounded-full blur-3xl" />
           </div>
+
+          {/* Gold grid pattern */}
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `linear-gradient(hsl(45 85% 46% / 0.4) 1px, transparent 1px),
+                               linear-gradient(90deg, hsl(45 85% 46% / 0.4) 1px, transparent 1px)`,
+              backgroundSize: "60px 60px",
+            }}
+          />
 
           <div className="relative container mx-auto px-6">
             <motion.div
@@ -98,7 +109,7 @@ const HowItWorks = () => {
               transition={{ duration: 0.6 }}
               className="max-w-3xl mx-auto text-center"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/5 mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/50 bg-gold/10 mb-8 shadow-lg glow-gold">
                 <span className="text-gold text-sm font-medium">End-to-End Lifecycle</span>
               </div>
 
@@ -114,8 +125,11 @@ const HowItWorks = () => {
         </section>
 
         {/* Steps Timeline */}
-        <section className="py-24 lg:py-32">
-          <div className="container mx-auto px-6">
+        <section className="py-24 lg:py-32 relative">
+          {/* Subtle gold gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gold/5 via-transparent to-gold/5 pointer-events-none" />
+
+          <div className="relative container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               {steps.map((step, index) => (
                 <motion.div
@@ -126,44 +140,64 @@ const HowItWorks = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="relative"
                 >
-                  {/* Timeline Line */}
+                  {/* Timeline Line with gold gradient */}
                   {index < steps.length - 1 && (
-                    <div className="absolute left-8 lg:left-1/2 top-24 bottom-0 w-px bg-gradient-to-b from-gold/50 via-gold/20 to-transparent lg:-translate-x-1/2" />
+                    <div className="absolute left-8 lg:left-1/2 top-24 bottom-0 w-px bg-gradient-to-b from-gold via-gold/40 to-gold lg:-translate-x-1/2" />
                   )}
 
                   <div className={`flex flex-col lg:flex-row gap-8 lg:gap-16 mb-16 lg:mb-24 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                     {/* Step Number & Icon */}
                     <div className="flex-shrink-0 lg:w-1/2 flex lg:justify-end">
                       <div className={`flex items-start gap-6 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                        {/* Icon Circle */}
-                        <div className="relative z-10">
+                        {/* Icon Circle with enhanced gold styling */}
+                        <motion.div
+                          className="relative z-10"
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ type: "spring", stiffness: 300 }}
+                        >
                           <div className="w-16 h-16 rounded-2xl bg-gradient-gold flex items-center justify-center shadow-lg glow-gold">
                             <step.icon className="w-8 h-8 text-dark" />
                           </div>
-                        </div>
+                          {/* Pulse ring */}
+                          <motion.div
+                            className="absolute inset-0 rounded-2xl border-2 border-gold"
+                            animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0, 0.5] }}
+                            transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
+                          />
+                        </motion.div>
 
-                        {/* Step Number */}
+                        {/* Step Number with gold outline */}
                         <div className={`hidden lg:block ${index % 2 === 1 ? 'text-left' : 'text-right'}`}>
-                          <span className="font-display text-6xl font-bold text-gold/20">
+                          <span
+                            className="font-display text-6xl font-bold"
+                            style={{
+                              WebkitTextStroke: "2px hsl(45 85% 46% / 0.4)",
+                              WebkitTextFillColor: "transparent",
+                            }}
+                          >
                             {step.step}
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    {/* Content Card */}
+                    {/* Content Card with gold border on hover */}
                     <div className="lg:w-1/2 pl-24 lg:pl-0">
-                      <div className="relative group">
-                        {/* Gradient border effect */}
-                        <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-gold/30 via-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        
-                        <div className="relative p-8 rounded-2xl bg-dark-muted border border-border">
+                      <motion.div
+                        className="relative group"
+                        whileHover={{ y: -5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {/* Gradient border effect - always slightly visible */}
+                        <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-gold/40 via-gold/20 to-gold/40 opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+
+                        <div className="relative p-8 rounded-2xl bg-dark-muted border border-gold/20 group-hover:border-gold/40 transition-colors">
                           {/* Mobile Step Number */}
                           <span className="lg:hidden font-display text-sm text-gold mb-2 block">
                             Step {step.step}
                           </span>
 
-                          <h3 className="font-display text-2xl font-semibold text-light mb-3">
+                          <h3 className="font-display text-2xl font-semibold text-light mb-3 group-hover:text-gold transition-colors">
                             {step.title}
                           </h3>
 
@@ -172,15 +206,22 @@ const HowItWorks = () => {
                           </p>
 
                           <ul className="space-y-2">
-                            {step.details.map((detail) => (
-                              <li key={detail} className="flex items-center gap-3 text-sm text-muted-foreground">
-                                <div className="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0" />
+                            {step.details.map((detail, detailIndex) => (
+                              <motion.li
+                                key={detail}
+                                className="flex items-center gap-3 text-sm text-muted-foreground"
+                                initial={{ opacity: 0, x: -10 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.2 + detailIndex * 0.1 }}
+                              >
+                                <div className="w-2 h-2 bg-gold rounded-full flex-shrink-0 shadow-sm" style={{ boxShadow: "0 0 8px hsl(45 85% 46% / 0.5)" }} />
                                 {detail}
-                              </li>
+                              </motion.li>
                             ))}
                           </ul>
                         </div>
-                      </div>
+                      </motion.div>
                     </div>
                   </div>
                 </motion.div>
@@ -189,11 +230,15 @@ const HowItWorks = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-24 border-t border-border relative overflow-hidden">
+        {/* CTA Section with enhanced gold styling */}
+        <section className="py-24 border-t border-gold/30 relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/10 rounded-full blur-3xl" />
           </div>
+
+          {/* Gold corner accents */}
+          <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-gold/30 rounded-tl-3xl" />
+          <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-gold/30 rounded-br-3xl" />
 
           <div className="relative container mx-auto px-6">
             <motion.div
@@ -204,7 +249,7 @@ const HowItWorks = () => {
               className="max-w-2xl mx-auto text-center"
             >
               <h2 className="font-display text-3xl md:text-4xl font-bold text-light mb-6">
-                Ready to Get Started?
+                Ready to <span className="text-gradient-gold">Get Started</span>?
               </h2>
 
               <p className="text-muted-foreground mb-10">

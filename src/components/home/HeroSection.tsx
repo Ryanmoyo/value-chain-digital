@@ -50,7 +50,7 @@ const HeroSection = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="heroOutline" size="xl">
-                Partner With Us
+                Get Early Access
               </Button>
             </div>
           </motion.div>
