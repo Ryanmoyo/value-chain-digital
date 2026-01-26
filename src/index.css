@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+     --background: 60 1% 52%;
     --foreground: 0 0% 5%;
 
     --card: 0 0% 100%;
@@ -66,7 +66,7 @@
   }
 
   .dark {
-    --background: 0 0% 5%;
+   --background: 60 1% 52%;
     --foreground: 0 0% 98%;
 
     --card: 0 0% 8%;
@@ -138,7 +138,7 @@
 
   .border-gradient-gold {
     border: 1px solid transparent;
-    background: linear-gradient(hsl(0 0% 8%), hsl(0 0% 8%)) padding-box,
+    background: linear-gradient(#878681, padding-box),
                 linear-gradient(135deg, hsl(45 85% 46% / 0.5), hsl(45 85% 46% / 0.1)) border-box;
   }
 

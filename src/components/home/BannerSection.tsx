@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import digitizedCityBanner from "@/assets/digitized-city-banner.jpg";
+import digitizedCityBanner from "src/assets/digitized_city_banner2.jpeg";
 
 const BannerSection = () => {
   return (
@@ -48,8 +48,8 @@ const BannerSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            A More Visual Representation of the{" "}
-            <span className="text-gradient-gold">Origin to Exit</span>
+            Digitising the Entire  {" "}
+            <span className="text-gradient-gold">Real Estate Value Chain</span>
           </motion.h2>
 
           {/* Animated underline */}
@@ -60,6 +60,9 @@ const BannerSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
           />
+          <span>EquiXToken Capital is a digital infrastructure platform that modernises how real estate assets are structured, owned, transacted, and managed — reducing friction, lowering costs, and expanding access to property markets.
+
+</span>
         </motion.div>
       </div>
 
