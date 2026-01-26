@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import digitizedCityBanner from "src/assets/digitized_city_banner2.jpeg";
+import digitizedCityBanner from "@/assets/digitized_city_banner2.jpeg";
 
 const BannerSection = () => {
   return (
