@@ -1,0 +1,121 @@
+.chain-section {
+  @apply bg-dark-muted py-24 lg:py-32 border-border relative overflow-hidden;
+}
+
+/* Grid background */
+.chain-grid-bg {
+  @apply absolute inset-0 opacity-10;
+  background-image: radial-gradient(circle at center, hsl(45 85% 46% / 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Container & header */
+.chain-container {
+  @apply relative container mx-auto px-6;
+}
+
+.chain-header {
+  @apply text-center mb-16;
+}
+
+.chain-label {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/5 mb-8;
+}
+
+.chain-label-icon {
+  @apply w-4 h-4 text-gold;
+}
+
+.chain-title {
+  @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-light mb-4;
+}
+
+.chain-subtitle {
+  @apply text-muted-foreground max-w-2xl mx-auto;
+}
+
+/* Desktop horizontal chain */
+.chain-desktop {
+  @apply hidden lg:flex items-center justify-between max-w-5xl mx-auto;
+}
+
+.chain-step {
+  @apply flex items-center;
+}
+
+.chain-node-group {
+  @apply relative  cursor-pointer;
+}
+
+.chain-node-glow {
+  @apply absolute -inset-4 rounded-full bg-gold/20 blur-xl opacity-0 group-hover:opacity-100;
+}
+
+.chain-node-wrapper {
+  @apply relative;
+}
+
+.chain-node-outer {
+  @apply w-20 h-20 rounded-full bg-gradient-gold p-[2px] shadow-lg glow-gold;
+}
+
+.chain-node-inner {
+  @apply w-full h-full rounded-full bg-dark flex items-center justify-center group-hover:bg-dark-muted transition-colors;
+}
+
+.chain-node-icon {
+  @apply w-8 h-8 text-gold;
+}
+
+.chain-node-pulse {
+  @apply absolute inset-0 rounded-full border-2 border-gold/50;
+}
+
+.chain-node-label {
+  @apply text-center mt-4;
+}
+
+.chain-node-label p:first-child {
+  @apply font-display font-semibold text-light text-sm;
+}
+
+.chain-node-label p:last-child {
+  @apply text-xs text-muted-foreground;
+}
+
+.chain-connector {
+  @apply flex-1 mx-4 relative;
+}
+
+.chain-connector-bar {
+  @apply h-1 bg-gradient-to-r from-gold/60 via-gold to-gold/60 rounded-full relative overflow-hidden;
+}
+
+.chain-connector-animated {
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent;
+}
+
+.chain-connector-dot {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-gold shadow-lg;
+}
+
+/* Mobile vertical chain */
+.chain-mobile {
+  @apply lg:hidden flex flex-col items-center gap-4;
+}
+
+.chain-step-mobile {
+  @apply flex flex-col items-center;
+}
+
+.chain-node-mobile {
+  @apply flex items-center gap-4;
+}
+
+.chain-node-mobile-icon {
+  @apply w-16 h-16 rounded-full bg-gradient-gold p-[2px] shadow-lg flex items-center justify-center;
+}
+
+.chain-connector-vertical {
+  @apply w-1 h-8 bg-gradient-to-b from-gold via-gold/50 to-gold rounded-full my-2;
+}

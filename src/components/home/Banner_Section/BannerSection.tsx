@@ -1,24 +1,26 @@
 import { motion } from "framer-motion";
 import digitizedCityBanner from "@/assets/digitized_city_banner2.jpeg";
+import "./BannerSection.css";
 
-const BannerSection = () => {
+const BannerSection: React.FC = () => {
   return (
-    <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
+    <section className="banner">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="banner-bg">
         <img
           src={digitizedCityBanner}
           alt="Digitized cityscape"
-          className="w-full h-full object-cover"
+          className="banner-image"
         />
+
         {/* Overlay gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/80 via-transparent to-dark/80" />
+        <div className="banner-overlay-vertical" />
+        <div className="banner-overlay-horizontal" />
       </div>
 
       {/* Animated scan lines */}
       <motion.div
-        className="absolute inset-0 pointer-events-none"
+        className="banner-scanlines"
         style={{
           background: `repeating-linear-gradient(
             0deg,
@@ -33,36 +35,42 @@ const BannerSection = () => {
       />
 
       {/* Content */}
-      <div className="relative h-full container mx-auto px-6 flex items-center justify-center">
+      <div className="banner-content">
         <motion.div
+          className="banner-inner"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-4xl"
         >
           <motion.h2
-            className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-light leading-tight"
+            className="banner-title"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Digitising the Entire  {" "}
-            <span className="text-gradient-gold">Real Estate Value Chain</span>
+            Digitising the Entire{" "}
+            <span className="text-gradient-gold">
+              Real Estate Value Chain
+            </span>
           </motion.h2>
 
           {/* Animated underline */}
           <motion.div
-            className="mt-6 mx-auto h-1 bg-gradient-gold rounded-full"
+            className="banner-underline"
             initial={{ width: 0 }}
             whileInView={{ width: "200px" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
           />
-          <span>EquiXToken Capital is a digital infrastructure platform that modernises how real estate assets are structured, owned, transacted, and managed — reducing friction, lowering costs, and expanding access to property markets.
 
-</span>
+          <span className="banner-description">
+            EquiXToken Capital is a digital infrastructure platform that
+            modernises how real estate assets are structured, owned,
+            transacted, and managed — reducing friction, lowering costs,
+            and expanding access to property markets.
+          </span>
         </motion.div>
       </div>
 
@@ -70,7 +78,7 @@ const BannerSection = () => {
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-gold/40 rounded-full"
+          className="banner-particle"
           style={{
             left: `${20 + i * 15}%`,
             top: `${30 + (i % 3) * 20}%`,

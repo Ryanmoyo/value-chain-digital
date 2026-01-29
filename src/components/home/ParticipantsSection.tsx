@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Building, Briefcase, ArrowUpRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+//will be changed to partners, participants, users etc.
 const participants = [
   {
     icon: TrendingUp,

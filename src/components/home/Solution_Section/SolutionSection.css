@@ -1,0 +1,28 @@
+.solution-section {
+  @apply bg-dark py-24 lg:py-32 relative overflow-hidden;
+  /* Removed border to keep sections seamless */
+}
+
+.solution-container {
+  @apply container mx-auto px-6;
+}
+
+.solution-content {
+  @apply max-w-4xl mx-auto text-center;
+}
+
+.solution-label {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/5 mb-8;
+}
+
+.solution-label span {
+  @apply text-gold text-sm font-medium;
+}
+
+.solution-title {
+  @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-light mb-6;
+}
+
+.solution-description {
+  @apply text-lg text-muted-foreground leading-relaxed mb-12;
+}

@@ -21,7 +21,7 @@ const problems = [
 
 const ProblemSection = () => {
   return (
-    <section className="bg-dark py-24 lg:py-32 border-t border-border">
+    <section className="bg-dark py-24 lg:py-32  border-border">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
