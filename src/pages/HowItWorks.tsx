@@ -81,7 +81,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <div className="min-h-screen bg-dark">
+    <div className="min-h-screen" style={{ backgroundColor: "hsl(40 25% 94%)" }}>
       <Header />
       <main>
         {/* Hero Section */}
@@ -113,7 +113,7 @@ const HowItWorks = () => {
                 <span className="text-gold text-sm font-medium">End-to-End Lifecycle</span>
               </div>
 
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-light mb-6">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
                 How It <span className="text-gradient-gold">Works</span>
               </h1>
 
@@ -191,13 +191,13 @@ const HowItWorks = () => {
                         {/* Gradient border effect - always slightly visible */}
                         <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-gold/40 via-gold/20 to-gold/40 opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
 
-                        <div className="relative p-8 rounded-2xl bg-dark-muted border border-gold/20 group-hover:border-gold/40 transition-colors">
+                        <div className="relative p-8 rounded-2xl bg-white border border-gold/20 group-hover:border-gold/40 transition-colors shadow-md">
                           {/* Mobile Step Number */}
                           <span className="lg:hidden font-display text-sm text-gold mb-2 block">
                             Step {step.step}
                           </span>
 
-                          <h3 className="font-display text-2xl font-semibold text-light mb-3 group-hover:text-gold transition-colors">
+                          <h3 className="font-display text-2xl font-semibold text-foreground mb-3 group-hover:text-gold transition-colors">
                             {step.title}
                           </h3>
 
@@ -248,7 +248,7 @@ const HowItWorks = () => {
               transition={{ duration: 0.6 }}
               className="max-w-2xl mx-auto text-center"
             >
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-light mb-6">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Ready to <span className="text-gradient-gold">Get Started</span>?
               </h2>
 
