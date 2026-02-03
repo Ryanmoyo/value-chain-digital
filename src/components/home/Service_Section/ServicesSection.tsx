@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FileKey, Shield, BarChart3, Users, Building2, ArrowLeftRight, Sparkles } from "lucide-react";
-import "./ServicesSection.css";
+import "./ServiceSection.css";
 
 const services = [
   { icon: Building2, title: "Asset Digitisation", description: "Transform physical properties into digital assets with full legal compliance." },
