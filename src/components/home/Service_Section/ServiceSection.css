@@ -128,16 +128,19 @@
 
 .services-card {
   flex: 1;
-  background-color: hsl(40 30% 96%); /* Slightly lighter ivory for card */
+  background-color: hsl(0 0% 100%); /* Pure white for contrast */
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid hsl(40 20% 90%);
 }
 
 .services-card:hover {
   transform: translateY(-0.25rem);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Icon */
