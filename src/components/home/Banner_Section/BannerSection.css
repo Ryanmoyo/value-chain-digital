@@ -8,11 +8,11 @@
 
 /* Background */
 .banner-bg {
-  @apply absolute inset-20;
+  @apply absolute inset-0;
 }
 
 .banner-image {
-  @apply w-full h-full object-contain;
+  @apply w-full h-full object-cover;
 }
 
 .banner-overlay-vertical {
