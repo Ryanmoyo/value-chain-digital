@@ -71,13 +71,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img 
               src={equixtokenLogo} 
               alt="EquixToken Capital Logo" 
-              className="w-12 h-12 object-contain"
+              className="w-16 h-16 object-contain"
             />
             <span className="font-display font-semibold text-xl text-light hidden sm:block">
               EquiX<span className="text-gold">Token</span>
