@@ -26,8 +26,7 @@ const BannerSection: React.FC = () => {
             0deg,
             transparent,
             transparent 2px,
-            hsl(45 85% 46% / 0.03) 2px,
-            hsl(45 85% 46% / 0.03) 4px
+
           )`,
         }}
         animate={{ y: [0, 10, 0] }}

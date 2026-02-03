@@ -1,10 +1,16 @@
 .solution-section {
-  @apply bg-dark py-24 lg:py-32 relative overflow-hidden;
+  background-color: hsl(40 25% 94%);
+  padding-top: 6rem;   /* py-24 */
+  padding-bottom: 8rem; /* lg:py-32 */
+  position: relative;
+  overflow: hidden;
   /* Removed border to keep sections seamless */
 }
 
+
 .solution-container {
   @apply container mx-auto px-6;
+  
 }
 
 .solution-content {
@@ -20,9 +26,12 @@
 }
 
 .solution-title {
-  @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-light mb-6;
+  @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6;
 }
 
 .solution-description {
   @apply text-lg text-muted-foreground leading-relaxed mb-12;
+}
+.bg-light-muted {
+    background-color: hsl(40 25% 94%);
 }
