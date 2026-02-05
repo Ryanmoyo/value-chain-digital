@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import EquixLogo from "@/assets/Equix_Logo_Long.jpeg";
+import "./Header.css";
 
 const navLinks = [
   { label: "Platform", href: "#platform", isRoute: false },
@@ -74,13 +76,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
-              <span className="font-display font-bold text-dark text-xl">E</span>
-            </div>
-            <span className="font-display font-semibold text-xl text-light hidden sm:block">
-              EquiX<span className="text-gold">Token</span>
-            </span>
+            <img
+              src={EquixLogo}
+              alt="EquixToken Capital"
+              className="header-logo"
+            />
           </Link>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
