@@ -3,13 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import EquixLogo from "@/assets/Equix_Logo_Long.jpeg";
-import "./Header.css";
-
+import equixtokenLogo from "@/assets/equix-logo-removebg-preview.png";
 const navLinks = [
   { label: "Platform", href: "#platform", isRoute: false },
   { label: "How It Works", href: "/how-it-works", isRoute: true },
-  { label: "Participants", href: "/participants", isRoute: true },
+  { label: "Participants", href: "#participants", isRoute: false },
   { label: "About", href: "#about", isRoute: false },
 ];
 
@@ -75,11 +73,14 @@ const Header = () => {
         <div className="flex items-center justify-between h-40">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img
-              src={EquixLogo}
-              alt="EquixToken Capital"
-              className="header-logo"
+            <img 
+              src={equixtokenLogo} 
+              alt="EquixToken Capital Logo" 
+              className="w-[90px] h-[90px] object-contain"
             />
+            <span className="font-display font-semibold text-xl text-light hidden sm:block">
+              EquiX<span className="text-gold">Token</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

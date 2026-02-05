@@ -22,47 +22,39 @@ const problems = [
 
 const ProblemSection = () => {
   return (
-    <section className="problem-section">
-      <div className="problem-section__container">
+    <section className="problem-section bg light-muted">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="problem-section__header"
+          className="section-header"
         >
-          <h2 className="problem-section__title">
+          <h2 className="section-title">
             Real Estate Is Broken by{" "}
-            <span className="problem-section__title-accent">
-              Fragmentation
-            </span>
+            <span className="highlight">Fragmentation</span>
           </h2>
         </motion.div>
 
         <div className="problem-grid">
           {problems.map((problem, index) => (
-            <motion.article
+            <motion.div
               key={problem.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="problem-card"
+              className="problem-card-wrapper"
             >
-              <div className="problem-card__content">
-                <div className="problem-card__icon-wrapper">
-                  <problem.icon className="problem-card__icon" />
+              <div className="problem-card">
+                <div className="problem-icon-wrapper">
+                  <problem.icon className="problem-icon" />
                 </div>
-
-                <h3 className="problem-card__title">
-                  {problem.title}
-                </h3>
-
-                <p className="problem-card__description">
-                  {problem.description}
-                </p>
+                <h3 className="problem-title">{problem.title}</h3>
+                <p className="problem-description">{problem.description}</p>
               </div>
-            </motion.article>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -81,7 +81,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "hsl(40 20% 88%)" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "hsl(40 25% 94%)" }}>
       <Header />
       <main>
         {/* Hero Section */}
