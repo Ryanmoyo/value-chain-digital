@@ -22,19 +22,13 @@ const problems = [
 
 const ProblemSection = () => {
   return (
-<<<<<<<< HEAD:src/components/home/Problem_Section/ProblemSection.tsx
     <section className="problem-section">
       <div className="problem-section__container">
-========
-    <section className="problem-section bg light-muted">
-      <div className="container">
->>>>>>>> f7ba351f210b66f4ddd2761d44d836f586cdab2b:src/components/home/ProblemSection/ProblemSection.tsx
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-<<<<<<<< HEAD:src/components/home/Problem_Section/ProblemSection.tsx
           className="problem-section__header"
         >
           <h2 className="problem-section__title">
@@ -42,13 +36,6 @@ const ProblemSection = () => {
             <span className="problem-section__title-accent">
               Fragmentation
             </span>
-========
-          className="section-header"
-        >
-          <h2 className="section-title">
-            Real Estate Is Broken by{" "}
-            <span className="highlight">Fragmentation</span>
->>>>>>>> f7ba351f210b66f4ddd2761d44d836f586cdab2b:src/components/home/ProblemSection/ProblemSection.tsx
           </h2>
         </motion.div>
 
@@ -60,7 +47,6 @@ const ProblemSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<<< HEAD:src/components/home/Problem_Section/ProblemSection.tsx
               className="problem-card"
             >
               <div className="problem-card__content">
@@ -75,16 +61,6 @@ const ProblemSection = () => {
                 <p className="problem-card__description">
                   {problem.description}
                 </p>
-========
-              className="problem-card-wrapper"
-            >
-              <div className="problem-card">
-                <div className="problem-icon-wrapper">
-                  <problem.icon className="problem-icon" />
-                </div>
-                <h3 className="problem-title">{problem.title}</h3>
-                <p className="problem-description">{problem.description}</p>
->>>>>>>> f7ba351f210b66f4ddd2761d44d836f586cdab2b:src/components/home/ProblemSection/ProblemSection.tsx
               </div>
             </motion.article>
           ))}
