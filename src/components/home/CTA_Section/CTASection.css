@@ -1,0 +1,127 @@
+/* CTA Section */
+.cta-section {
+  
+  padding-top: 6rem;  /* py-24 */
+  padding-bottom: 8rem; /* lg:py-32 */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background */
+.cta-bg {
+  position: absolute;
+  inset: 0;
+  background-color: hsl(40 33% 98%); /* Ivory background */
+}
+.cta-bg-decor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  background-color: hsl(45 40% 92% / 0.05); /* soft gold accent */
+  border-radius: 9999px;
+  filter: blur(3rem);
+  transform: translate(-50%, -50%);
+}
+
+/* Container */
+.cta-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Content */
+.cta-content {
+  max-width: 48rem; /* max-w-3xl */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title */
+.cta-title {
+  font-family: "Inter", sans-serif; /* font-display */
+  font-weight: 700;
+  font-size: 2rem; /* text-3xl */
+  color: hsl(30 10% 15%); /* foreground text */
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .cta-title {
+    font-size: 2.5rem; /* md:text-4xl */
+  }
+}
+@media (min-width: 1024px) {
+  .cta-title {
+    font-size: 3rem; /* lg:text-5xl */
+  }
+}
+
+.cta-title-highlight {
+  background: linear-gradient(135deg, hsl(45 85% 46%), hsl(42 90% 38%)); /* text-gradient-gold */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.cta-description {
+  font-size: 1.125rem; /* text-lg */
+  color: hsl(30 8% 45%); /* muted foreground */
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+/* Actions */
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .cta-actions {
+    flex-direction: row;
+  }
+}
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: pulse-glow 2s infinite;
+}
+.cta-button-icon {
+  width: 1.25rem; /* w-5 */
+  height: 1.25rem;
+  transition: transform 0.3s;
+}
+.cta-button:hover .cta-button-icon {
+  transform: translateX(0.25rem);
+}
+
+/* Trust Section */
+.cta-trust {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid hsl(40 20% 88%); /* border-border */
+}
+.cta-trust-text {
+  font-size: 0.875rem; /* text-sm */
+  color: hsl(30 8% 45%); /* muted foreground */
+  margin-bottom: 1.5rem;
+}
+.cta-trust-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0.5;
+}
+.cta-trust-logo {
+  font-family: "Inter", sans-serif; /* font-display */
+  font-size: 1.125rem; /* text-lg */
+  color: hsl(40 33% 98% / 0.6); /* light/60 */
+}
