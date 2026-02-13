@@ -96,8 +96,8 @@ const HowItWorks = () => {
           <div
             className="absolute inset-0 opacity-10"
             style={{
-              backgroundImage: `linear-gradient(hsl(45 85% 46% / 0.4) 1px, transparent 1px),
-                               linear-gradient(90deg, hsl(45 85% 46% / 0.4) 1px, transparent 1px)`,
+              backgroundImage: `linear-gradient(hsl(45 80% 55% / 0.4) 1px, transparent 1px),
+                               linear-gradient(90deg, hsl(45 85% 38% / 0.4) 1px, transparent 1px)`,
               backgroundSize: "60px 60px",
             }}
           />

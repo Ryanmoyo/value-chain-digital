@@ -193,10 +193,13 @@
   .chain-label-icon {
     @apply w-4 h-4 text-primary;
   }
+  
+.chain-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-black;
+}
 
-  .chain-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4;
-  }
+
+
 
   .chain-subtitle {
     @apply text-muted-foreground max-w-2xl mx-auto;
