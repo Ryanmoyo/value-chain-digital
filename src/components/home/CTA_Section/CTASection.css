@@ -121,7 +121,19 @@
   opacity: 0.5;
 }
 .cta-trust-logo {
-  font-family: "Inter", sans-serif; /* font-display */
-  font-size: 1.125rem; /* text-lg */
-  color: hsl(40 33% 98% / 0.6); /* light/60 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cta-trust-logo-img {
+  height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.3s, opacity 0.3s;
+}
+.cta-trust-logo-img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
 }
