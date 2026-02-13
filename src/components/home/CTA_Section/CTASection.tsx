@@ -3,6 +3,19 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import "./CTASection.css";
 
+import godwallLogo from "@/assets/Godwall_Logo.png";
+import rlabsLogo from "@/assets/RLabsLogo.png";
+import alxLogo from "@/assets/alx_logo.jpg";
+import geuUnLogo from "@/assets/geu_un_logo.jpg";
+import yomaLogo from "@/assets/yoma_logo.png";
+
+const partners = [
+  { name: "Godwall", logo: godwallLogo },
+  { name: "RLabs", logo: rlabsLogo },
+  { name: "ALX", logo: alxLogo },
+  { name: "GEU UN", logo: geuUnLogo },
+  { name: "Yoma", logo: yomaLogo },
+];
 const CTASection = () => {
   return (
     <section className="cta-section">
@@ -53,13 +66,11 @@ const CTASection = () => {
           >
             <p className="cta-trust-text">Trusted by forward-thinking institutions</p>
             <div className="cta-trust-logos">
-              {["Institution 1", "Institution 2", "Institution 3", "Institution 4"].map(
-                (inst) => (
-                  <div key={inst} className="cta-trust-logo">
-                    {inst}
-                  </div>
-                )
-              )}
+              {partners.map((partner) => (
+                <div key={partner.name} className="cta-trust-logo">
+                  <img src={partner.logo} alt={partner.name} className="cta-trust-logo-img" />
+                </div>
+              ))}
             </div>
           </motion.div>
         </motion.div>
