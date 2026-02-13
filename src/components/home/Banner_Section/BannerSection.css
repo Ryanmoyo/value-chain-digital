@@ -3,10 +3,25 @@
 @tailwind utilities;
 /* Banner layout */
 .banner {
-  @apply relative overflow-hidden;
+  @apply relative;
   margin-top: var(--navbar-height);
   height: 100vh;
   min-height: calc(400px - var(--navbar-height));
+  margin-bottom: -8rem; /* let it bleed into the next section */
+  z-index: 1;
+}
+
+/* Bottom fade into page background */
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12rem;
+  background: linear-gradient(to bottom, transparent, hsl(var(--background)));
+  z-index: 10;
+  pointer-events: none;
 }
 
 
