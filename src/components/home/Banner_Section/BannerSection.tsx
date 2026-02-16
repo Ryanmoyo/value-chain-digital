@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import digitizedCityBanner from "@/assets/digitized_city_banner2.jpeg";
+import digitizedCityBanner from "@/assets/digitized-city-light.jpg";
 import "./BannerSection.css";
 
 const BannerSection: React.FC = () => {
