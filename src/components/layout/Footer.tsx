@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import equixtokenLogo from "@/assets/equix_logo_square-removebg-preview.png";
 
 const footerLinks = {
   platform: [
@@ -26,12 +27,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
-                <span className="font-display font-bold text-dark text-xl">E</span>
-              </div>
-              <span className="font-display font-semibold text-xl text-light">
-                EquiX<span className="text-gold">Token</span>
-              </span>
+              <img src={equixtokenLogo} alt="EquiXToken Capital Logo" className="h-12 w-auto object-contain" />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mb-6">
               Digitising the Real Estate Value Chain — modernising how property assets are structured, owned, transacted, and managed.

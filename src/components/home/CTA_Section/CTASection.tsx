@@ -10,7 +10,7 @@ import geuUnLogo from "@/assets/geu_un_logo.jpg";
 import yomaLogo from "@/assets/yoma_logo.png";
 
 const partners = [
-  { name: "Godwall", logo: godwallLogo },
+  { name: "Goodwall", logo: godwallLogo },
   { name: "RLabs", logo: rlabsLogo },
   { name: "ALX", logo: alxLogo },
   { name: "GEU UN", logo: geuUnLogo },
