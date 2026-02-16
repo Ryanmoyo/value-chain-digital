@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import equixtokenLogo from "@/assets/equix_logo_square-removebg-preview.png";
 const navLinks = [
@@ -13,6 +14,7 @@ const navLinks = [
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
   const location = useLocation();
 
   const NavLink = ({ link }: { link: typeof navLinks[0] }) => {
@@ -93,6 +95,13 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="text-light/70 hover:text-gold transition-colors p-2"
+              aria-label="Toggle dark mode"
+            >
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <Button variant="goldOutline" size="sm">
               Partner With Us
             </Button>
