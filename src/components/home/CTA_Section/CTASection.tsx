@@ -69,6 +69,7 @@ const CTASection = () => {
               {partners.map((partner) => (
                 <div key={partner.name} className="cta-trust-logo">
                   <img src={partner.logo} alt={partner.name} className="cta-trust-logo-img" />
+                  <span className="cta-trust-logo-name">{partner.name}</span>
                 </div>
               ))}
             </div>
