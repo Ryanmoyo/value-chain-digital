@@ -11,15 +11,24 @@
   z-index: 1;
 }
 
-/* Bottom fade into page background */
+/* Light rays spreading from bottom */
 .banner::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 12rem;
-  background: linear-gradient(to bottom, transparent, hsl(var(--background)));
+  bottom: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 16rem;
+  background: 
+    linear-gradient(175deg, transparent 45%, hsl(45 80% 48% / 0.15) 48%, transparent 51%),
+    linear-gradient(170deg, transparent 45%, hsl(45 80% 48% / 0.1) 48%, transparent 51%),
+    linear-gradient(185deg, transparent 45%, hsl(45 80% 48% / 0.15) 48%, transparent 51%),
+    linear-gradient(190deg, transparent 45%, hsl(45 80% 48% / 0.1) 48%, transparent 51%),
+    linear-gradient(165deg, transparent 45%, hsl(45 80% 48% / 0.08) 48%, transparent 51%),
+    linear-gradient(195deg, transparent 45%, hsl(45 80% 48% / 0.08) 48%, transparent 51%),
+    linear-gradient(160deg, transparent 46%, hsl(45 80% 48% / 0.06) 48%, transparent 50%),
+    linear-gradient(200deg, transparent 46%, hsl(45 80% 48% / 0.06) 48%, transparent 50%);
   z-index: 10;
   pointer-events: none;
 }
