@@ -22,7 +22,6 @@ const Index = () => {
         <ServicesSection />
         
         {/* <ParticipantsSection /> */}
-        {/* Participants section removed */}
         <CTASection />
       </main>
       <Footer />

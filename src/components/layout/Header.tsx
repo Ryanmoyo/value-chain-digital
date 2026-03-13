@@ -102,12 +102,12 @@ const Header = () => {
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            {/* <Button variant="goldOutline" size="sm">
+            <Button variant="goldOutline" size="sm">
               Partner With Us
             </Button>
             <Button variant="gold" size="sm">
               Get Early Access
-            </Button> */}
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -133,14 +133,14 @@ const Header = () => {
               {navLinks.map((link) => (
                 <MobileNavLink key={link.label} link={link} />
               ))}
-              {/* <div className="flex flex-col gap-3 pt-4 border-t border-border">
+              <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="goldOutline" className="w-full">
                   Partner With Us
                 </Button>
                 <Button variant="gold" className="w-full">
                   Get Early Access
                 </Button>
-              </div> */}
+              </div>
             </nav>
           </motion.div>
         )}
