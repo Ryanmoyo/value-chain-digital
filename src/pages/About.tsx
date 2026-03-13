@@ -26,38 +26,29 @@ const About = () => {
         </section>
 
         <section className="container mx-auto px-6 mb-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+              <h2 className="font-display text-3xl font-bold text-foreground mb-4">Our Story</h2>
               <img
                 src={founderImage}
                 alt="EquiXToken Founder at Future Founder SA Showcase 2025"
-                className="rounded-2xl shadow-lg w-full object-cover"
+                className="float-left mr-8 mb-4 rounded-2xl shadow-lg w-72 object-cover"
               />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="font-display text-3xl font-bold text-foreground mb-4">Our Story</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-              EquiXToken Capital was born from a personal experience that revealed how complex and costly the traditional real estate system can be.
+                EquiXToken Capital was born from a personal experience that revealed how complex and costly the traditional real estate system can be.
+              </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-             While navigating the process of transferring property ownership within a family, it became clear how difficult and expensive even a simple transaction could be. What should have been a straightforward process was slowed down by administrative complexity, high transaction costs, and outdated systems.
-            That moment revealed a much larger problem. The inefficiencies experienced in that situation are not unique — they affect millions of people buying, selling, or transferring property around the world. At the same time, many individuals who want to invest in real estate are unable to participate because the barriers to entry remain too high.
-            </p>
-            <strong>EquiXToken Capital was founded to help change this reality. </strong>
-             By modernizing the infrastructure that powers the real estate value chain, we aim to reduce transaction costs, improve transparency, and expand access to property ownership and investment opportunities. Our goal is to help build a future where more people can participate in real estate and benefit from one of the world’s most powerful drivers of generational wealth.
-            </p>
-
- 
+                While navigating the process of transferring property ownership within a family, it became clear how difficult and expensive even a simple transaction could be. What should have been a straightforward process was slowed down by administrative complexity, high transaction costs, and outdated systems. That moment revealed a much larger problem. The inefficiencies experienced in that situation are not unique — they affect millions of people buying, selling, or transferring property around the world. At the same time, many individuals who want to invest in real estate are unable to participate because the barriers to entry remain too high.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong>EquiXToken Capital was founded to help change this reality.</strong> By modernizing the infrastructure that powers the real estate value chain, we aim to reduce transaction costs, improve transparency, and expand access to property ownership and investment opportunities. Our goal is to help build a future where more people can participate in real estate and benefit from one of the world's most powerful drivers of generational wealth.
+              </p>
+              <div className="clear-both" />
             </motion.div>
           </div>
         </section>
