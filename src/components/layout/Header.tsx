@@ -8,7 +8,6 @@ import equixtokenLogo from "@/assets/equix_logo_square-removebg-preview.png";
 const navLinks = [
   { label: "Platform", href: "#platform", isRoute: false },
   { label: "How It Works", href: "/how-it-works", isRoute: true },
-  { label: "Participants", href: "#participants", isRoute: false },
   { label: "About", href: "/About", isRoute: true },
 ];
 
