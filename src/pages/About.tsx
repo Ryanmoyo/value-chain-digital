@@ -46,23 +46,54 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="font-display text-3xl font-bold text-foreground mb-4">Meet the Founder</h2>
+              <h2 className="font-display text-3xl font-bold text-foreground mb-4">Our Story</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Our founder's vision for EquiXToken Capital was born from a deep understanding of the
-                inefficiencies plaguing traditional real estate markets across Africa and emerging economies.
-                Recognised at the Future Founder SA Showcase 2025, EquiXToken was awarded R100,000 for its
-                innovative approach to digitising property markets.
-              </p>
+              EquiXToken Capital was born from a personal experience that revealed how complex and costly the traditional real estate system can be.
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.
+             While navigating the process of transferring property ownership within a family, it became clear how difficult and expensive even a simple transaction could be. What should have been a straightforward process was slowed down by administrative complexity, high transaction costs, and outdated systems.
+            That moment revealed a much larger problem. The inefficiencies experienced in that situation are not unique — they affect millions of people buying, selling, or transferring property around the world. At the same time, many individuals who want to invest in real estate are unable to participate because the barriers to entry remain too high.
+            </p>
+            <strong>EquiXToken Capital was founded to help change this reality. </strong>
+             By modernizing the infrastructure that powers the real estate value chain, we aim to reduce transaction costs, improve transparency, and expand access to property ownership and investment opportunities. Our goal is to help build a future where more people can participate in real estate and benefit from one of the world’s most powerful drivers of generational wealth.
+            </p>
+
+ 
+            </motion.div>
+          </div>
+        </section>
+
+         <section className="container mx-auto px-6 mb-20">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-card rounded-2xl p-10 shadow-md"
+            >
+              <h2 className="font-display text-3xl font-bold text-foreground mb-6 text-center"> Our Vision</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Our vision is to build the digital infrastructure that powers the future of real estate. We envision a world where property ownership and investment are accessible to more people, where transactions are faster and more affordable, and where real estate can participate in the broader digital economy. By modernizing the real estate value chain, we aim to unlock a more transparent, efficient, and globally connected property market where ownership, capital, and opportunity can move more freely.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+            </motion.div>
+          </div>
+        </section>
+
+
+        <section className="container mx-auto px-6 mb-20">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-card rounded-2xl p-10 shadow-md"
+            >
+              <h2 className="font-display text-3xl font-bold text-foreground mb-6 text-center"> Our Mission</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Our vision is to build the digital infrastructure that powers the future of real estate. We envision a world where property ownership and investment are accessible to more people, where transactions are faster and more affordable, and where real estate can participate in the broader digital economy. By modernizing the real estate value chain, we aim to unlock a more transparent, efficient, and globally connected property market where ownership, capital, and opportunity can move more freely.
               </p>
+
             </motion.div>
           </div>
         </section>
@@ -76,10 +107,10 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="bg-card rounded-2xl p-10 shadow-md"
             >
-              <h2 className="font-display text-3xl font-bold text-foreground mb-6 text-center">Our Mission</h2>
+              <h2 className="font-display text-3xl font-bold text-foreground mb-6 text-center">Why We exist</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel
-                scelerisque nisl consectetur et. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.
+                Real estate has long been one of the most powerful vehicles for wealth creation, yet the systems that govern it remain costly, slow, and difficult to access. Complex processes, high transaction costs, and limited access to investment opportunities prevent many individuals and communities from participating in property ownership and the value it creates.
+EquiXToken Capital exists to change this. We are building the infrastructure to digitize and modernize the real estate value chain, reducing costs, improving efficiency, and expanding access to property investment. By transforming how real estate assets are owned, managed, and transacted in the digital economy, we aim to unlock new financial possibilities for developers, investors, and everyday individuals while creating a more inclusive and globally connected property market.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo,
