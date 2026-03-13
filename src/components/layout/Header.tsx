@@ -133,14 +133,14 @@ const Header = () => {
               {navLinks.map((link) => (
                 <MobileNavLink key={link.label} link={link} />
               ))}
-              <div className="flex flex-col gap-3 pt-4 border-t border-border">
+              {/* <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="goldOutline" className="w-full">
                   Partner With Us
                 </Button>
                 <Button variant="gold" className="w-full">
                   Get Early Access
                 </Button>
-              </div>
+              </div> */}
             </nav>
           </motion.div>
         )}
