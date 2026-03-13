@@ -102,12 +102,12 @@ const Header = () => {
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <Button variant="goldOutline" size="sm">
+            {/* <Button variant="goldOutline" size="sm">
               Partner With Us
             </Button>
             <Button variant="gold" size="sm">
               Get Early Access
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile Menu Button */}
