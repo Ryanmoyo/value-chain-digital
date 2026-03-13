@@ -27,7 +27,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="/" className="flex items-center gap-3 mb-6">
-              <img src={equixtokenLogo} alt="EquiXToken Capital Logo" className="h-12 w-auto object-contain" />
+              <img src={equixtokenLogo} alt="EquiXToken Capital Logo" className="h-20 w-auto object-contain" />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mb-6">
               Digitising the Real Estate Value Chain — modernising how property assets are structured, owned, transacted, and managed.
@@ -95,9 +95,12 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} EquiXToken Capital. All rights reserved.
-          </p>
+          <div className="flex items-center gap-4">
+            <img src={equixtokenLogo} alt="EquiXToken Capital Logo" className="h-10 w-auto object-contain" />
+            <p className="text-muted-foreground text-sm">
+              © {new Date().getFullYear()} EquiXToken Capital. All rights reserved.
+            </p>
+          </div>
           <p className="text-muted-foreground text-sm italic">
             Digitising the Real Estate Value Chain
           </p>

@@ -8,6 +8,7 @@ import rlabsLogo from "@/assets/RLabsLogo.png";
 import alxLogo from "@/assets/alx_logo.jpg";
 import geuUnLogo from "@/assets/geu_un_logo.jpg";
 import yomaLogo from "@/assets/yoma_logo.png";
+import fnbLogo from "@/assets/First_National_Bank_Logo.svg";
 
 const partners = [
   { name: "Goodwall", logo: godwallLogo },
@@ -15,6 +16,7 @@ const partners = [
   { name: "ALX", logo: alxLogo },
   { name: "GEU UN", logo: geuUnLogo },
   { name: "Yoma", logo: yomaLogo },
+  { name: "FNB", logo: fnbLogo },
 ];
 const CTASection = () => {
   return (
@@ -43,7 +45,7 @@ const CTASection = () => {
             future of property investment.
           </p>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -54,7 +56,7 @@ const CTASection = () => {
               Get Early Access
               <ArrowRight className="cta-button-icon" />
             </Button>
-          </motion.div>
+          </motion.div> */}
 
           {/* Trust Indicators */}
           <motion.div

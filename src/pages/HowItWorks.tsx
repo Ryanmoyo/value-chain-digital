@@ -256,7 +256,7 @@ const HowItWorks = () => {
                 Join the platform that's transforming how real estate assets move through their lifecycle.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" className="group">
                   Get Early Access
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -264,7 +264,7 @@ const HowItWorks = () => {
                 <Button variant="heroOutline" size="xl">
                   Contact Us
                 </Button>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </section>

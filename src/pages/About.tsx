@@ -26,27 +26,19 @@ const About = () => {
         </section>
 
         <section className="container mx-auto px-6 mb-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+              <h2 className="font-display text-3xl font-bold text-foreground mb-6">Our Story</h2>
               <img
                 src={founderImage}
                 alt="EquiXToken Founder at Future Founder SA Showcase 2025"
-                className="rounded-2xl shadow-lg w-full object-cover"
+                className="float-left mr-8 mb-4 rounded-2xl shadow-lg w-72 md:w-80 object-cover"
               />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="font-display text-3xl font-bold text-foreground mb-4">Meet the Founder</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Our founder's vision for EquiXToken Capital was born from a deep understanding of the
                 inefficiencies plaguing traditional real estate markets across Africa and emerging economies.
@@ -56,13 +48,21 @@ const About = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                veritatis et quasi architecto beatae vitae dicta sunt explicabo.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
               </p>
+              <div className="clear-both" />
             </motion.div>
           </div>
         </section>
