@@ -45,7 +45,7 @@ const CTASection = () => {
             future of property investment.
           </p>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -56,7 +56,7 @@ const CTASection = () => {
               Get Early Access
               <ArrowRight className="cta-button-icon" />
             </Button>
-          </motion.div>
+          </motion.div> */}
 
           {/* Trust Indicators */}
           <motion.div
