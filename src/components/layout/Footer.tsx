@@ -33,10 +33,10 @@ const Footer = () => {
               Digitising the Real Estate Value Chain — modernising how property assets are structured, owned, transacted, and managed.
             </p>
             <a
-              href="mailto:info@equixtokencapital.xyz"
+              href="mailto:hello@equixtoken.com"
               className="inline-flex items-center gap-2 text-gold hover:text-gold-light transition-colors text-sm"
             >
-              info@equixtokencapital.xyz
+              hello@equixtoken.com
               <ArrowUpRight size={14} />
             </a>
           </div>
