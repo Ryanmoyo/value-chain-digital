@@ -38,7 +38,7 @@ const About = () => {
                 src={founderImage}
                 alt="EquiXToken Founder at Future Founder SA Showcase 2025"
                 className="float-left mr-8 mb-4 rounded-2xl shadow-lg object-cover"
-                style={{ width: '250px', height: '300px' }}
+                style={{ width: '300px', height: '300px' }}
               />
               <p className="text-muted-foreground leading-relaxed mb-4">
                 EquiXToken Capital was born from a personal experience that revealed how complex and costly the traditional real estate system can be.
