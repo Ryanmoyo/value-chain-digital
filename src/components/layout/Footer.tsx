@@ -27,7 +27,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="/" className="flex items-center gap-3 mb-6">
-              <img src={equixtokenLogo} alt="EquiXToken Capital Logo" className="h-20 w-auto object-contain" />
+              <img src={equixtokenLogo} alt="EquiXToken Capital Logo" className="h-28 w-auto object-contain" />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mb-6">
               Digitising the Real Estate Value Chain — modernising how property assets are structured, owned, transacted, and managed.
