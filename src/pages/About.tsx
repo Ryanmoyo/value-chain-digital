@@ -38,6 +38,7 @@ const About = () => {
                 src={founderImage}
                 alt="EquiXToken Founder at Future Founder SA Showcase 2025"
                 className="float-left mr-8 mb-4 rounded-2xl shadow-lg object-cover"
+                loading="lazy"
                 style={{ width: '300px', height: '300px' }}
               />
               <p className="text-muted-foreground leading-relaxed mb-4">
