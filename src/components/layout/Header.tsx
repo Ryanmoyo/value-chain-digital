@@ -78,7 +78,7 @@ const Header = () => {
             <img 
               src={equixtokenLogo} 
               alt="EquixToken Capital Logo" 
-              className="w-[200px] h-[90px] pt-[10px] object-cover"
+              className="w-[200px] h-[90px] pt-0 object-cover"
             />
             {/* <span className="font-display font-semibold text-xl text-light hidden sm:block">
               EquiX<span className="text-gold">Token</span>
