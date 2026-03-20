@@ -14,8 +14,7 @@ const steps = [
 const OriginToExitSection: React.FC = () => {
   return (
     <section className="chain-section">
-      {/* Grid background */}
-      <div className="chain-grid-bg" />
+      {/* Grid background removed */}
 
       <div className="chain-container">
         <motion.div
