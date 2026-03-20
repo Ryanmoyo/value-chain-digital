@@ -226,11 +226,16 @@
   }
 
   .chain-node-outer {
-    @apply w-20 h-20 rounded-full bg-gradient-gold p-[2px] shadow-lg glow-gold;
+    @apply w-20 h-20 rounded-full bg-gradient-gold p-[2px] shadow-lg;
   }
 
   .chain-node-inner {
-    @apply w-full h-full rounded-full bg-background flex items-center justify-center group-hover:bg-card transition-colors;
+    @apply w-full h-full rounded-full flex items-center justify-center transition-colors;
+    background-color: hsl(40 33% 98%);
+  }
+
+  .chain-node-inner:hover {
+    background-color: hsl(40 30% 96%);
   }
 
   .chain-node-icon {
