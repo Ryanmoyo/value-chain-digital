@@ -226,7 +226,7 @@
   }
 
   .chain-node-outer {
-    @apply w-20 h-20 rounded-full bg-gradient-gold p-[2px] shadow-lg glow-gold;
+    @apply w-20 h-20 rounded-full bg-gradient-gold p-[2px] shadow-lg;
   }
 
   .chain-node-inner {
