@@ -11,6 +11,7 @@ import CTASection from "@/components/home/CTA_Section/CTASection";
 
 const Index = () => {
   return (
+    
     <div className="min-h-screen">
       <Header />
       <main>
