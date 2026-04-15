@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import equixtokenLogo from "@/assets/equix_logo_square-removebg-preview.png";
 const navLinks = [
-  { label: "Platform", href: "#platform", isRoute: false },
+  { label: "Platform", href: "/platform", isRoute: true },
   { label: "How It Works", href: "/how-it-works", isRoute: true },
   { label: "About", href: "/About", isRoute: true },
 ];
@@ -94,13 +94,13 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <button
+            {/* <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="text-light/70 hover:text-gold transition-colors p-2"
               aria-label="Toggle dark mode"
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            </button> */}
             {/* <Button variant="goldOutline" size="sm">
               Partner With Us
             </Button>
